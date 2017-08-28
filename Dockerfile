@@ -22,7 +22,7 @@ RUN chown -R mysql:mysql /var/run/mysqld && chown -R mysql:mysql /var/lib/mysql
 
 RUN mkdir /docker-entrypoint-initdb.d
 
-ADD my_custom.cnf /etc/mysql/my.cnf
+ADD my.cnf /etc/mysql/my.cnf
 
 
 COPY docker-entrypoint.sh /
