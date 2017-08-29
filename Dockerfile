@@ -24,7 +24,7 @@ RUN mkdir /docker-entrypoint-initdb.d
 
 ADD my.cnf /etc/mysql/my.cnf
 
-
+WORKDIR  mkdir /etc/mysql/conf.d
 COPY docker-entrypoint.sh /
 
 WORKDIR /var/lib/mysql
