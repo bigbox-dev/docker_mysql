@@ -116,10 +116,9 @@ if [ "$1" = 'mysqld' -a -z "$wantHelp" ]; then
 		echo
 		echo 'MySQL init process done. Ready for start up.'
 		echo
-		echo -e "[client]\nuser=\"root\"\npassword=\"$MYSQL_ROOT_PASSWORD\"" > /root/.my.cnf
 	fi
 fi
-
+echo -e "[client]\nuser=\"root\"\npassword=\"$MYSQL_ROOT_PASSWORD\"" > /root/.my.cnf
 if [[ $1 == 'make' ]]; then
     exec "${@}" -f /usr/local/bin/actions.mk
 else
